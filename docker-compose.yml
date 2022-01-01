@@ -25,7 +25,6 @@ services:
       - frontend
       - backend
     depends_on: 
-      - mysql
       - backend
 
 
@@ -56,8 +55,6 @@ services:
     volumes:
       - /app/node_modules
       - ./backend:/app
-    depends_on:
-      - mysql
     environment:
       MYSQL_HOST: docker-fullstack-mysql.ca2ml98gsvmh.ap-northeast-2.rds.amazonaws.com
       MYSQL_USER: root
